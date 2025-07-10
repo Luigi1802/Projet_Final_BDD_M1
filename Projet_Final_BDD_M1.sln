@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet_Final_BDD_M1", "Projet_Final_BDD_M1.csproj", "{A14F59C2-AB5A-430B-9808-F978356D737E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesAPI", "GamesAPI\GamesAPI.csproj", "{33EBA45E-75B5-4C3C-8A08-A46D07BDADF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A14F59C2-AB5A-430B-9808-F978356D737E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14F59C2-AB5A-430B-9808-F978356D737E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14F59C2-AB5A-430B-9808-F978356D737E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14F59C2-AB5A-430B-9808-F978356D737E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EBA45E-75B5-4C3C-8A08-A46D07BDADF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EBA45E-75B5-4C3C-8A08-A46D07BDADF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EBA45E-75B5-4C3C-8A08-A46D07BDADF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EBA45E-75B5-4C3C-8A08-A46D07BDADF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

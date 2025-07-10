@@ -1,5 +1,5 @@
 ﻿namespace GamesAPI;
 
-public class Class1
+public class ConnectorFour
 {
 }

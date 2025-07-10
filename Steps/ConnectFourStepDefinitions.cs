@@ -3,8 +3,6 @@
 [Binding]
 public sealed class ConnectFourStepDefinitions
 {
-    // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
-
     private readonly ScenarioContext _scenarioContext;
 
     public ConnectFourStepDefinitions(ScenarioContext scenarioContext)

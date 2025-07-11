@@ -118,9 +118,7 @@ public class ConnectFour
         int player = grid[row, column];
         
         // Vérifier horizontal
-        if (CheckDirection(row, column, 0, 1, player) || 
-            CheckDirection(row, column, 0, -1, player) ||
-            CheckDirection(row, column, 0, 1, player) + CheckDirection(row, column, 0, -1, player) + 1 >= 4)
+        if (CheckDirection(row, column, 0, 1, player) + CheckDirection(row, column, 0, -1, player) + 1 >= 4)
         {
             return true;
         }

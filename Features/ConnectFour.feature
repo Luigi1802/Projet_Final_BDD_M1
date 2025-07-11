@@ -45,11 +45,6 @@ Scenario: Play column out of bounds
 	When player 1 plays column 7
 	Then the column out of bounds error is thrown
 	
-# Jouer une ligne hors cadre
-Scenario: Play row out of bounds
-	When player 1 plays row 6
-	Then a row out of bounds error is thrown
-	
 # Victoire verticale
 Scenario: Vertical win
 	Given the following grid:

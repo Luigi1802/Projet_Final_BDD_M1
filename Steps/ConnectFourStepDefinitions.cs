@@ -10,43 +10,82 @@ public sealed class ConnectFourStepDefinitions
         _scenarioContext = scenarioContext;
     }
 
-    [Given("the first number is (.*)")]
-    public void GivenTheFirstNumberIs(int number)
-    {
-        //TODO: implement arrange (precondition) logic
-        // For storing and retrieving scenario-specific data see https://go.specflow.org/doc-sharingdata
-        // To use the multiline text or the table argument of the scenario,
-        // additional string/Table parameters can be defined on the step definition
-        // method. 
 
-        _scenarioContext.Pending();
+    [Given(@"a new connect four grid")]
+    public void GivenANewConnectFourGrid()
+    {
+        ScenarioContext.StepIsPending();
     }
 
-    [Given("the second number is (.*)")]
-    public void GivenTheSecondNumberIs(int number)
+    [Then(@"the grid should be empty")]
+    public void ThenTheGridShouldBeEmpty()
     {
-        //TODO: implement arrange (precondition) logic
-        // For storing and retrieving scenario-specific data see https://go.specflow.org/doc-sharingdata
-        // To use the multiline text or the table argument of the scenario,
-        // additional string/Table parameters can be defined on the step definition
-        // method. 
-
-        _scenarioContext.Pending();
+        ScenarioContext.StepIsPending();
     }
 
-    [When("the two numbers are added")]
-    public void WhenTheTwoNumbersAreAdded()
+    [When(@"player (.*) plays column (.*)")]
+    public void WhenPlayerPlaysColumn(int p0, int p1)
     {
-        //TODO: implement act (action) logic
-
-        _scenarioContext.Pending();
+        ScenarioContext.StepIsPending();
     }
 
-    [Then("the result should be (.*)")]
-    public void ThenTheResultShouldBe(int result)
+    [Then(@"the grid column (.*) row (.*) should be (.*)")]
+    public void ThenTheGridColumnRowShouldBe(int p0, int p1, int p2)
     {
-        //TODO: implement assert (verification) logic
+        ScenarioContext.StepIsPending();
+    }
 
-        _scenarioContext.Pending();
+    [Then(@"columns (.*) to (.*) should be empty")]
+    public void ThenColumnsToShouldBeEmpty(int p0, int p1)
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"next row for column (.*) should be (.*)")]
+    public void ThenNextRowForColumnShouldBe(int p0, int p1)
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Given(@"the following grid:")]
+    public void GivenTheFollowingGrid(Table table)
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"column (.*) row (.*) should be (.*)")]
+    public void ThenColumnRowShouldBe(int p0, int p1, int p2)
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"player (.*) should win")]
+    public void ThenPlayerShouldWin(int p0)
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"a tie match should be declared")]
+    public void ThenATieMatchShouldBeDeclared()
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"the full column error is thrown")]
+    public void ThenTheFullColumnErrorIsThrown()
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"the column out of bounds error is thrown")]
+    public void ThenTheColumnOutOfBoundsErrorIsThrown()
+    {
+        ScenarioContext.StepIsPending();
+    }
+
+    [Then(@"the wrong turn error is thrown")]
+    public void ThenTheWrongTurnErrorIsThrown()
+    {
+        ScenarioContext.StepIsPending();
     }
 }

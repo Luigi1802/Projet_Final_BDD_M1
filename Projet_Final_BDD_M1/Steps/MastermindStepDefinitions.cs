@@ -31,6 +31,7 @@ public sealed class MastermindStepDefinitions
     [Given(@"the game starts with custom combination:")]
     public void GivenTheGameStartsWithCustomCombination(Table table)
     {
+        _customCombination = new List<String>();
         foreach (var row in table.Rows)
         {
             var color = row["Colors"];
@@ -62,6 +63,7 @@ public sealed class MastermindStepDefinitions
     [Given(@"the game starts with (.*) attempts and custom combination:")]
     public void GivenTheGameStartsWithAttemptsAndCustomCombination(int p0, Table table)
     {
+        _customCombination = new List<String>();
         foreach (var row in table.Rows)
         {
             var color = row["Colors"];
@@ -112,6 +114,12 @@ public sealed class MastermindStepDefinitions
     [Given(@"the player adds the guess:")]
     public void GivenThePlayerAddsTheGuess(Table table)
     {
+        _playerCombination = new List<String>();
+        if (_mastermindGame == null)
+        {
+            _exception = new GameNotInProgressException("Game not started");
+            return;
+        }
         foreach (var row in table.Rows)
         {
             var color = row["Colors"];
@@ -130,19 +138,16 @@ public sealed class MastermindStepDefinitions
     [Given(@"the player adds (.*) wrong guesses for combination:")]
     public void GivenThePlayerAddsWrongGuessesForCombination(int p0, Table table)
     {
-        List<String> falseCombination = new List<String>();
-        var falsified = false;
-        const String falseColor = "Red";
+        List<String> correctCombination = new List<String>();
+        
         foreach (var row in table.Rows)
         {
             var color = row["Colors"];
-            if (!falsified && color != falseColor) {
-                falseCombination.Add(falseColor);
-                falsified = true;
-            } else {
-                falseCombination.Add(color);
-            }
+            correctCombination.Add(color);
         }
+
+        List<String> falseCombination = GenerateWrongCombination(correctCombination);
+        
         for (var i = 0; i < p0; i++)
         {
             try
@@ -187,5 +192,16 @@ public sealed class MastermindStepDefinitions
     {
         _exception.Should().NotBeNull("No exception was thrown.");
         _exception.Should().BeOfType<GameNotInProgressException>("The exception was thrown but isn't GameNotInProgressException.");
+    }
+    
+    private List<String> GenerateWrongCombination(List<String> secretCombination)
+    {
+        var validColors = new List<String> { "Red", "Green", "Blue", "White", "Pink", "Purple", "Orange", "Yellow" };
+        var availableColors = validColors.Where(color => !secretCombination.Contains(color)).ToList();
+    
+        List<String> wrongCombination = new List<String>(secretCombination);
+        wrongCombination[0] = availableColors[0];
+
+        return wrongCombination;
     }
 }

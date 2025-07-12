@@ -10,13 +10,14 @@ Scenario: Start of the game
 Scenario: First move played
 	Given a new connect four grid
 	When player 1 plays column 0
-	Then the grid column 0 row 0 should be 1
+	Then column 0 row 0 should be 1
 	And columns 1 to 6 should be empty
 	And next row for column 0 should be 1
 
 # Jouer sur un jeton	
 Scenario: Stack a token
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -24,13 +25,14 @@ Scenario: Stack a token
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
     When player 2 plays column 0
-    Then the grid column 0 row 1 should be 2
-    And column 0 row 0 should be 1
+	Then column 0 row 0 should be 1
+	And column 0 row 1 should be 2
     And next row for column 0 should be 2
 	
 # Jouer sur une colonne pleine
 Scenario: Play a full column
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -42,12 +44,14 @@ Scenario: Play a full column
 
 # Jouer une colonne hors cadre
 Scenario: Play column out of bounds
+	Given a new connect four grid
 	When player 1 plays column 7
 	Then the column out of bounds error is thrown
 	
 # Victoire verticale
 Scenario: Vertical win
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -60,6 +64,7 @@ Scenario: Vertical win
 # Victoire horizontale
 Scenario: Horizontal win
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -72,6 +77,7 @@ Scenario: Horizontal win
 # Victoire diagonale gauche
 Scenario: Left diagonal win
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -84,6 +90,7 @@ Scenario: Left diagonal win
 # Victoire diagonale droite
 Scenario: Right diagonal win
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 	  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -96,12 +103,13 @@ Scenario: Right diagonal win
 # Partie nulle
 Scenario: Tie match
 	Given the following grid:
+	  | C | O | N | N | E | C | T |
 	  | 2 | 1 | 2 | 2 | 2 | 1 | 0 |
-	  | 1 | 2 | 1 | 2 | 1 | 2 | 1 |
-	  | 2 | 1 | 2 | 1 | 2 | 2 | 2 |
-	  | 1 | 1 | 1 | 2 | 1 | 1 | 1 |
-	  | 2 | 1 | 1 | 2 | 1 | 2 | 1 |
-	  | 2 | 2 | 2 | 1 | 2 | 1 | 1 |
+	  | 1 | 2 | 1 | 1 | 1 | 2 | 1 |
+	  | 2 | 1 | 2 | 2 | 2 | 1 | 2 |
+	  | 1 | 2 | 1 | 1 | 1 | 2 | 1 |
+	  | 2 | 1 | 2 | 2 | 2 | 1 | 2 |
+	  | 1 | 1 | 2 | 1 | 1 | 2 | 1 |
 	When player 2 plays column 6
 	Then a tie match should be declared
 
@@ -115,5 +123,5 @@ Scenario: Player alternation
 # Jouer après la fin d'une partie
 Scenario: Play after game is won
 	Given player 1 has won the game
-	When player 2 tries to play column 0
+	When player 2 plays column 0
 	Then the game over error is thrown

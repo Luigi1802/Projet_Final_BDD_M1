@@ -146,7 +146,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("player 1 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.Then("the grid column 0 row 0 should be 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("column 0 row 0 should be 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 14
  testRunner.And("columns 1 to 6 should be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -186,6 +186,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
+                table1.AddRow(new string[] {
                             "0",
                             "0",
                             "0",
@@ -236,16 +244,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.Given("the following grid:", ((string)(null)), table1, "Given ");
 #line hidden
-#line 26
+#line 27
     testRunner.When("player 2 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
-    testRunner.Then("the grid column 0 row 1 should be 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
 #line 28
-    testRunner.And("column 0 row 0 should be 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("column 0 row 0 should be 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 29
+ testRunner.And("column 0 row 1 should be 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
     testRunner.And("next row for column 0 should be 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -259,7 +267,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play a full column", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
+#line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -280,21 +288,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "2",
-                            "0",
-                            "0",
-                            "0",
-                            "0",
-                            "0",
-                            "0"});
-                table2.AddRow(new string[] {
-                            "1",
-                            "0",
-                            "0",
-                            "0",
-                            "0",
-                            "0",
-                            "0"});
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
                 table2.AddRow(new string[] {
                             "2",
                             "0",
@@ -327,13 +327,29 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0",
                             "0"});
-#line 33
+                table2.AddRow(new string[] {
+                            "2",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"});
+                table2.AddRow(new string[] {
+                            "1",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"});
+#line 34
  testRunner.Given("the following grid:", ((string)(null)), table2, "Given ");
 #line hidden
-#line 40
+#line 42
     testRunner.When("player 1 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 43
  testRunner.Then("the full column error is thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -347,7 +363,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play column out of bounds", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 44
+#line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -367,10 +383,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 45
+#line 47
+ testRunner.Given("a new connect four grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 48
  testRunner.When("player 1 plays column 7", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 49
  testRunner.Then("the column out of bounds error is thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -384,7 +403,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Vertical win", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 49
+#line 52
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -405,6 +424,22 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
+                table3.AddRow(new string[] {
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"});
+                table3.AddRow(new string[] {
                             "0",
                             "0",
                             "0",
@@ -421,8 +456,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0"});
                 table3.AddRow(new string[] {
-                            "0",
-                            "0",
+                            "1",
+                            "2",
                             "0",
                             "0",
                             "0",
@@ -444,21 +479,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0",
                             "0"});
-                table3.AddRow(new string[] {
-                            "1",
-                            "2",
-                            "0",
-                            "0",
-                            "0",
-                            "0",
-                            "0"});
-#line 50
+#line 53
  testRunner.Given("the following grid:", ((string)(null)), table3, "Given ");
 #line hidden
-#line 57
+#line 61
  testRunner.When("player 1 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 58
+#line 62
  testRunner.Then("player 1 should win", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -472,7 +499,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Horizontal win", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 61
+#line 65
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -493,6 +520,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
+                table4.AddRow(new string[] {
                             "0",
                             "0",
                             "0",
@@ -540,13 +575,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0",
                             "0"});
-#line 62
+#line 66
  testRunner.Given("the following grid:", ((string)(null)), table4, "Given ");
 #line hidden
-#line 69
+#line 74
  testRunner.When("player 1 plays column 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 70
+#line 75
  testRunner.Then("player 1 should win", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -560,7 +595,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Left diagonal win", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 73
+#line 78
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -581,6 +616,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
+                table5.AddRow(new string[] {
                             "0",
                             "0",
                             "0",
@@ -628,13 +671,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "2",
                             "0",
                             "0"});
-#line 74
+#line 79
  testRunner.Given("the following grid:", ((string)(null)), table5, "Given ");
 #line hidden
-#line 81
+#line 87
  testRunner.When("player 1 plays column 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 82
+#line 88
  testRunner.Then("player 1 should win", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -648,7 +691,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Right diagonal win", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 85
+#line 91
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -669,6 +712,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
+                table6.AddRow(new string[] {
                             "0",
                             "0",
                             "0",
@@ -716,13 +767,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "2",
                             "0",
                             "0"});
-#line 86
+#line 92
  testRunner.Given("the following grid:", ((string)(null)), table6, "Given ");
 #line hidden
-#line 93
+#line 100
  testRunner.When("player 1 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 94
+#line 101
  testRunner.Then("player 1 should win", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -736,7 +787,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tie match", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 97
+#line 104
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -757,6 +808,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "C",
+                            "O",
+                            "N",
+                            "N",
+                            "E",
+                            "C",
+                            "T"});
+                table7.AddRow(new string[] {
                             "2",
                             "1",
                             "2",
@@ -768,7 +827,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "1",
                             "2",
                             "1",
-                            "2",
+                            "1",
                             "1",
                             "2",
                             "1"});
@@ -776,41 +835,41 @@ this.ScenarioInitialize(scenarioInfo);
                             "2",
                             "1",
                             "2",
+                            "2",
+                            "2",
+                            "1",
+                            "2"});
+                table7.AddRow(new string[] {
+                            "1",
+                            "2",
+                            "1",
+                            "1",
+                            "1",
+                            "2",
+                            "1"});
+                table7.AddRow(new string[] {
+                            "2",
                             "1",
                             "2",
                             "2",
+                            "2",
+                            "1",
                             "2"});
                 table7.AddRow(new string[] {
                             "1",
                             "1",
-                            "1",
                             "2",
                             "1",
-                            "1",
-                            "1"});
-                table7.AddRow(new string[] {
-                            "2",
-                            "1",
-                            "1",
-                            "2",
                             "1",
                             "2",
                             "1"});
-                table7.AddRow(new string[] {
-                            "2",
-                            "2",
-                            "2",
-                            "1",
-                            "2",
-                            "1",
-                            "1"});
-#line 98
+#line 105
  testRunner.Given("the following grid:", ((string)(null)), table7, "Given ");
 #line hidden
-#line 105
+#line 113
  testRunner.When("player 2 plays column 6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 106
+#line 114
  testRunner.Then("a tie match should be declared", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -824,7 +883,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Player alternation", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 109
+#line 117
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -844,16 +903,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 110
+#line 118
  testRunner.Given("a new connect four grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 111
+#line 119
  testRunner.When("player 1 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 112
+#line 120
  testRunner.And("player 1 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 113
+#line 121
  testRunner.Then("the wrong turn error is thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -867,7 +926,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play after game is won", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 116
+#line 124
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -887,13 +946,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 117
+#line 125
  testRunner.Given("player 1 has won the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 118
- testRunner.When("player 2 tries to play column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 126
+ testRunner.When("player 2 plays column 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 119
+#line 127
  testRunner.Then("the game over error is thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

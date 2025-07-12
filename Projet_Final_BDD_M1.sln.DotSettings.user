@@ -1,0 +1,53 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=141e5ee0_002Dbdf0_002D42b5_002Db952_002D39ec0364ac0d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="StartOfTheGame" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.StartOfTheGame&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.FirstMovePlayed&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.StackAToken&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=486f422f_002De6da_002D4c5e_002D927b_002Dbcb307e123d1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ConnectFourFeature" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5d1060db_002D2712_002D4800_002Db7ff_002D19765f0d76e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LeftDiagonalWin" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.LeftDiagonalWin&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.TieMatch&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.RightDiagonalWin&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.HorizontalWin&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61b8a6a3_002D94f4_002D4127_002D823c_002D252cece5801f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FirstMovePlayed" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=720ffde2_002D0581_002D4145_002D8e6e_002Dd585ecabd537/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="VerticalWin" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=87666ae1_002D8085_002D4ae1_002D81d3_002De2c0c65c925a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TieMatch" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.TieMatch&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.HorizontalWin&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.PlayColumnOutOfBounds&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.StackAToken&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.RightDiagonalWin&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.VerticalWin&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.PlayAFullColumn&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.LeftDiagonalWin&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c012f4f3_002D9101_002D4611_002D9bae_002D738f41574443/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FirstMovePlayed #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature.FirstMovePlayed&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cac1ce77_002D7c5c_002D40ab_002D8675_002D7b42add3a0a3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="StartOfTheGame #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7D3CAE09-4956-4447-ACEF-6A952AE042AF::net6.0::Projet_Final_BDD_M1.Features.ConnectFourFeature&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

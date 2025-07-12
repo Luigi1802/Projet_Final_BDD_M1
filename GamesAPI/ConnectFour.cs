@@ -1,4 +1,6 @@
-﻿namespace GamesAPI;
+﻿using GamesAPI.Exceptions;
+
+namespace GamesAPI;
 
 using System;
 
@@ -40,7 +42,7 @@ public class ConnectFour
             }
         }
         
-        // Initialiser les prochaines lignes disponibles (commence par le bas)
+        // Initialiser les prochaines lignes disponibles
         for (int col = 0; col < COLS; col++)
         {
             nextRow[col] = 0;
@@ -61,7 +63,6 @@ public class ConnectFour
         {
             gameOver = true;
             winner = currentPlayer;
-            Console.WriteLine($"Joueur {currentPlayer} a gagné !");
             return;
         }
         
@@ -70,7 +71,6 @@ public class ConnectFour
         {
             gameOver = true;
             isTie = true;
-            Console.WriteLine("Match nul !");
             return;
         }
         
@@ -82,17 +82,17 @@ public class ConnectFour
     {
         if (gameOver)
         {
-            throw new InvalidOperationException("La partie est terminée !");
+            throw new GameOverException("Game over !");
         }
         
         if (column < 0 || column >= COLS)
         {
-            throw new ArgumentOutOfRangeException("Colonne hors limites !");
+            throw new ColumnOutOfBoundsException("Played column out of bounds !");
         }
         
         if (IsColumnFull(column))
         {
-            throw new InvalidOperationException("Cette colonne est pleine !");
+            throw new FullColumnException("Played column already full !");
         }
     }
     
@@ -181,23 +181,23 @@ public class ConnectFour
     
     public void PlayGame()
     {
-        Console.WriteLine("=== JEU DE PUISSANCE 4 ===");
-        Console.WriteLine("Joueur 1 (X) vs Joueur 2 (O)");
-        Console.WriteLine("Choisissez une colonne de 0 à 6");
+        Console.WriteLine("=== Connect 4 ===");
+        Console.WriteLine("Player 1 (X) vs Player 2 (O)");
+        Console.WriteLine("Choose a column in range 0-6");
         
         while (!gameOver)
         {
             DisplayGrid();
-            Console.WriteLine($"\nTour du joueur {currentPlayer} :");
+            Console.WriteLine($"\nPlayer {currentPlayer} :");
             
             try
             {
-                Console.Write("Choisissez une colonne (0-6) : ");
+                Console.Write("Choose a column in range 0-6 : ");
                 string input = Console.ReadLine();
                 
                 if (!int.TryParse(input, out int column))
                 {
-                    Console.WriteLine("Veuillez entrer un nombre valide !");
+                    Console.WriteLine("Invalid number !");
                     continue;
                 }
                 
@@ -205,7 +205,7 @@ public class ConnectFour
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erreur : {ex.Message}");
+                Console.WriteLine($"Error : {ex.Message}");
             }
         }
         
@@ -213,11 +213,11 @@ public class ConnectFour
         
         if (isTie)
         {
-            Console.WriteLine("\n🤝 Match nul ! Bien joué à tous les deux !");
+            Console.WriteLine("\nTie match, no winner !");
         }
         else
         {
-            Console.WriteLine($"\n🎉 Félicitations ! Le joueur {winner} a gagné !");
+            Console.WriteLine($"\nGame Over, Player {winner} won !");
         }
     }
     
@@ -236,12 +236,7 @@ public class ConnectFour
     {
         return currentPlayer;
     }
-    
-    public bool IsGameOver()
-    {
-        return gameOver;
-    }
-    
+
     public int GetWinner()
     {
         return winner;
@@ -261,7 +256,7 @@ public class ConnectFour
                 grid[row, col] = newGrid[row, col];
             }
         }
-        
+    
         // Recalculer les prochaines lignes disponibles
         for (int col = 0; col < COLS; col++)
         {
@@ -273,6 +268,35 @@ public class ConnectFour
                     nextRow[col] = row + 1;
                 }
             }
+            // Si la colonne est pleine, nextRow doit être ROWS
+            if (nextRow[col] == ROWS)
+            {
+                nextRow[col] = ROWS;
+            }
+        }
+    
+        // Déterminer le joueur actuel basé sur le nombre de jetons
+        int player1Count = 0;
+        int player2Count = 0;
+    
+        for (int row = 0; row < ROWS; row++)
+        {
+            for (int col = 0; col < COLS; col++)
+            {
+                if (grid[row, col] == PLAYER1) player1Count++;
+                else if (grid[row, col] == PLAYER2) player2Count++;
+            }
+        }
+    
+        // Si Player1 a joué en dernier (plus de jetons), c'est au tour de Player2
+        // Si égalité ou Player2 a plus de jetons, c'est au tour de Player1
+        if (player1Count > player2Count)
+        {
+            currentPlayer = PLAYER2; 
+        }
+        else
+        {
+            currentPlayer = PLAYER1; 
         }
     }
     
@@ -280,14 +304,18 @@ public class ConnectFour
     {
         gameOver = gameOverState;
         winner = winnerPlayer;
+        if (gameOverState && winnerPlayer == 0)
+        {
+            isTie = true;
+        }
     }
-    
+
     public static void Main(string[] args)
     {
         ConnectFour game = new ConnectFour();
         game.PlayGame();
         
-        Console.WriteLine("\nAppuyez sur une touche pour quitter...");
+        Console.WriteLine("\nType any key to quit...");
         Console.ReadKey();
     }
 }

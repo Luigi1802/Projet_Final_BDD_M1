@@ -63,7 +63,7 @@ public class Mastermind
 
     public List<int> AddGuess(List<string> combination)
     {
-        // Vérifier si le jeu est en cours
+        // Vérifier si la partie est est en cours
         if (_gameResult.HasValue)
         {
             throw new GameNotInProgressException("Game is not in progress");
@@ -133,8 +133,8 @@ public class Mastermind
             if (guessCopy[i] == secretCopy[i])
             {
                 redIndicators++;
-                secretCopy[i] = null; // Marquer comme utilisé
-                guessCopy[i] = null;  // Marquer comme utilisé
+                secretCopy[i] = null; // utilisé
+                guessCopy[i] = null;  // utilisé
             }
         }
 
@@ -148,7 +148,7 @@ public class Mastermind
                     if (secretCopy[j] != null && guessCopy[i] == secretCopy[j])
                     {
                         whiteIndicators++;
-                        secretCopy[j] = null; // Marquer comme utilisé
+                        secretCopy[j] = null; // utilisé
                         break;
                     }
                 }
